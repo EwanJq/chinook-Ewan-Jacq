@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des albums</title>
+</head>
+<body>
+    <h1>Albums disponibles</h1>
+    <ul>
+        {% for album in albums %}
+            <li>{{ album.title }} par {{ album.artist.name }}</li>
+        {% empty %}
+            <li>Aucun album trouvé.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
